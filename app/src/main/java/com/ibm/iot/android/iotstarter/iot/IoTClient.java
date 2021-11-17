@@ -29,9 +29,9 @@ import javax.net.SocketFactory;
  */
 public class IoTClient {
     private static final String TAG = IoTClient.class.getName();
-    private static final String IOT_ORGANIZATION_TCP = ".messaging.internetofthings.ibmcloud.com:1883";
-    private static final String IOT_ORGANIZATION_SSL = ".messaging.internetofthings.ibmcloud.com:8883";
-    private static final String IOT_DEVICE_USERNAME  = "use-token-auth";
+    private static final String IOT_ORGANIZATION_TCP = "192.168.1.167:1883";
+    private static final String IOT_ORGANIZATION_SSL = "192.168.1.167:8883";
+    private static final String IOT_DEVICE_USERNAME  = "";
 
     private static IoTClient instance;
     private MqttAndroidClient client;
@@ -104,7 +104,7 @@ public class IoTClient {
      */
     public IMqttToken connectDevice(IoTCallbacks callbacks, IoTActionListener listener, SocketFactory factory) throws MqttException {
         Log.d(TAG, ".connectDevice() entered");
-        String clientID = "d:" + this.getOrganization() + ":" + this.getDeviceType() + ":" + this.getDeviceID();
+        String clientID = "d:" + this.getDeviceID();
         String connectionURI;
         if (factory == null || this.getOrganization().equals("quickstart")) {
             connectionURI = "tcp://" + this.getOrganization() + IOT_ORGANIZATION_TCP;
@@ -120,7 +120,7 @@ public class IoTClient {
             client = new MqttAndroidClient(context, connectionURI, clientID);
             client.setCallback(callbacks);
 
-            String username = IOT_DEVICE_USERNAME;
+            String username = this.getDeviceID();
             char[] password = this.getAuthorizationToken().toCharArray();
 
             MqttConnectOptions options = new MqttConnectOptions();
@@ -396,7 +396,7 @@ public class IoTClient {
      * @return The event topic for the specified event string
      */
     public static String getEventTopic(String event, String format) {
-        return "iot-2/evt/" + event + "/fmt/json";
+        return "v1/devices/me/telemetry";
     }
 
     /**
