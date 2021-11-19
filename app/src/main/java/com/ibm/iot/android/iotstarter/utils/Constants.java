@@ -48,7 +48,7 @@ public class Constants {
 
     // IoT events and commands
     public final static String ACCEL_EVENT = "accel";
-    public final static String COLOR_EVENT = "color";
+    public final static String COLOR_EVENT = "getColorsFromAccel";
     public final static String TOUCH_EVENT = "touchmove";
     public final static String LIGHT_EVENT = "light";
     public final static String TEXT_EVENT = "text";

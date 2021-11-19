@@ -20,6 +20,8 @@ import android.util.Log;
 import org.eclipse.paho.android.service.MqttAndroidClient;
 import org.eclipse.paho.client.mqttv3.*;
 
+import java.util.Random;
+
 import javax.net.SocketFactory;
 
 /**
@@ -32,6 +34,7 @@ public class IoTClient {
     private static final String IOT_ORGANIZATION_TCP = "192.168.1.167:1883";
     private static final String IOT_ORGANIZATION_SSL = "192.168.1.167:8883";
     private static final String IOT_DEVICE_USERNAME  = "";
+    private static final int UNIQUE_RPC_REQUEST_ID = new Random().nextInt();
 
     private static IoTClient instance;
     private MqttAndroidClient client;
@@ -107,9 +110,9 @@ public class IoTClient {
         String clientID = "d:" + this.getDeviceID();
         String connectionURI;
         if (factory == null || this.getOrganization().equals("quickstart")) {
-            connectionURI = "tcp://" + this.getOrganization() + IOT_ORGANIZATION_TCP;
+            connectionURI = "tcp://" + IOT_ORGANIZATION_TCP;
         } else {
-            connectionURI = "ssl://" + this.getOrganization() + IOT_ORGANIZATION_SSL;
+            connectionURI = "ssl://" + IOT_ORGANIZATION_SSL;
         }
 
         if (!isMqttConnected()) {
@@ -396,7 +399,7 @@ public class IoTClient {
      * @return The event topic for the specified event string
      */
     public static String getEventTopic(String event, String format) {
-        return "v1/devices/me/telemetry";
+        return "v1/devices/me/rpc/request/" + UNIQUE_RPC_REQUEST_ID;
     }
 
     /**
@@ -406,7 +409,7 @@ public class IoTClient {
      * @return The command topic for the specified command string
      */
     public static String getCommandTopic(String command, String format) {
-        return "iot-2/cmd/" + command + "/fmt/json";
+        return "v1/devices/me/rpc/response/" + UNIQUE_RPC_REQUEST_ID;
     }
 
     public String getAuthorizationToken() {

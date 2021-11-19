@@ -62,10 +62,11 @@ public class MessageConductor {
      */
     public void steerMessage(String payload, String topic) throws JSONException {
         Log.d(TAG, ".steerMessage() entered");
-        JSONObject top = new JSONObject(payload);
+        payload = payload.replace("\\\"","'");
+        JSONObject top = new JSONObject(payload.substring(1,payload.length()-1));
         JSONObject d = top.getJSONObject("d");
 
-        if (topic.contains(Constants.COLOR_EVENT)) {
+        if (top.getString("method").contains(Constants.COLOR_EVENT)) {
             Log.d(TAG, "Color Event");
             int r = d.getInt("r");
             int g = d.getInt("g");

@@ -48,7 +48,7 @@ public class MessageFactory {
             int pos = isoTimestamp.length() - 2;
             isoTimestamp = isoTimestamp.substring(0, pos) + ':' + isoTimestamp.substring(pos);
         }
-        return "{ \"d\": {" +
+        return "{ \"method\":\"getColorsFromAccel\",\"params\": {" +
                 "\"acceleration_x\":" + G[0] + ", " +
                 "\"acceleration_y\":" + G[1] + ", " +
                 "\"acceleration_z\":" + G[2] + ", " +
