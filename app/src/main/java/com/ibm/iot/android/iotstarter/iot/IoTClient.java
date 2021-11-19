@@ -110,7 +110,7 @@ public class IoTClient {
         String clientID = "d:" + this.getDeviceID();
         String connectionURI;
         if (factory == null || this.getOrganization().equals("quickstart")) {
-            connectionURI = "tcp://" + IOT_ORGANIZATION_TCP;
+            connectionURI = "tcp://" + this.getOrganization() + ":1883";
         } else {
             connectionURI = "ssl://" + IOT_ORGANIZATION_SSL;
         }

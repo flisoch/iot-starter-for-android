@@ -43,7 +43,7 @@ public class Constants {
     // IoT properties
     public final static String AUTH_TOKEN = "authtoken";
     public final static String DEVICE_ID = "deviceid";
-    public final static String ORGANIZATION = "organization";
+    public final static String ORGANIZATION = "89.208.220.227";
     public final static String DEVICE_TYPE = "Android";
 
     // IoT events and commands

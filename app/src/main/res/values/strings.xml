@@ -44,18 +44,18 @@
     <string name="tutorial_label">Open Tutorial</string>
 
     <!-- Begin Login Fragment -->
-    <string name="showToken_button">Show Auth Token</string>
-    <string name="hideToken_button">Hide Auth Token</string>
+    <string name="showToken_button">Show Password</string>
+    <string name="hideToken_button">Hide Password</string>
     <string name="useSSL_button">Use SSL</string>
     <string name="activate_button">Activate Sensor</string>
     <string name="deactivate_button">Deactivate Sensor</string>
 
-    <string name="device_id">DeviceID: -</string>
+    <string name="device_id">Username (Token): -</string>
     <string name="is_connected">Connected to IoT: No</string>
 
-    <string name="organization_hint">Organization ID</string>
-    <string name="device_id_hint">Device ID</string>
-    <string name="auth_token_hint">Auth Token</string>
+    <string name="organization_hint">IP Address</string>
+    <string name="device_id_hint">Username (Token)</string>
+    <string name="auth_token_hint">Password</string>
     <!-- End Login Fragment -->
 
     <!-- Begin IoT Fragment -->
@@ -71,13 +71,13 @@
     <!-- End IoT Fragment -->
 
     <!-- Begin Settings Activity -->
-    <string name="organization_setting">Organization: </string>
-    <string name="device_id_setting">Device ID: </string>
-    <string name="auth_token_setting">Auth Token: </string>
+    <string name="organization_setting">IP Address: </string>
+    <string name="device_id_setting">Username (Token): </string>
+    <string name="auth_token_setting">Password: </string>
 
-    <string name="organization_value">Organization</string>
-    <string name="device_id_value">Device ID</string>
-    <string name="auth_token_value">Auth Token</string>
+    <string name="organization_value">89.208.220.227</string>
+    <string name="device_id_value">Username (Token)</string>
+    <string name="auth_token_value">Password</string>
 
     <string name="save_button">Save Settings</string>
 
