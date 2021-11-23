@@ -101,13 +101,14 @@
                 android:text="@string/showToken_button"
                 android:id="@+id/showTokenButton"/>
         </LinearLayout>
+
         <CheckBox
-                android:id="@+id/checkbox_ssl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/useSSL_button"
-                android:checked="true"/>
+            android:id="@+id/checkbox_ssl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:text="@string/useSSL_button" />
                 <!--android:onClick="onCheckboxClicked"/-->
         <TextView
                 style="@style/MyActionBarTitleText"

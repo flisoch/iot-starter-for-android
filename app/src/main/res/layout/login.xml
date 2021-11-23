@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/useSSL_button"
-                android:checked="true"/>
+                android:checked="false"/>
                 <!--android:onClick="onCheckboxClicked"/-->
         <TextView
                 style="@style/MyActionBarTitleText"

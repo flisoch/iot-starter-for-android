@@ -58,7 +58,7 @@ public class IoTStarterApplication extends Application {
     private String deviceId;
     private String authToken;
     private Constants.ConnectionType connectionType;
-    private boolean useSSL = true;
+    private boolean useSSL = false;
 
     private SharedPreferences settings;
 
