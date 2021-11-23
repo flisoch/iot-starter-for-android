@@ -44,8 +44,8 @@
     <string name="tutorial_label">Open Tutorial</string>
 
     <!-- Begin Login Fragment -->
-    <string name="showToken_button">Show Password</string>
-    <string name="hideToken_button">Hide Password</string>
+    <string name="showToken_button">Show Token</string>
+    <string name="hideToken_button">Hide Token</string>
     <string name="useSSL_button">Use SSL</string>
     <string name="activate_button">Activate Sensor</string>
     <string name="deactivate_button">Deactivate Sensor</string>
