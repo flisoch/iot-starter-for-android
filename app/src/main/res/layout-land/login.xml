@@ -64,34 +64,7 @@
         <LinearLayout android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:orientation="horizontal"
-                      android:layout_gravity="center">
-        <TextView
-                style="@style/MyActionBarTitleText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingTop="@dimen/activity_setting_margin"
-                android:paddingBottom="@dimen/activity_setting_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:text="@string/device_id_setting"
-                android:id="@+id/deviceIDSetting"
-                />
-        <EditText
-                style="@style/MyActionBarTitleText"
-                android:layout_width="175dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingTop="@dimen/activity_setting_margin"
-                android:paddingBottom="@dimen/activity_setting_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:hint="@string/device_id_value"
-                android:inputType="text"
-                android:id="@+id/deviceIDValue"
-                />
-        </LinearLayout>
+                      android:layout_gravity="center"/>
         <LinearLayout android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:orientation="horizontal"

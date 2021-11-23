@@ -136,11 +136,6 @@ public class LoginPagerFragment extends IoTStarterPagerFragment {
             ((EditText) getActivity().findViewById(R.id.organizationValue)).setText(app.getOrganization());
         }
 
-        // DeviceId should never be null at this point.
-        if (app.getDeviceId() != null) {
-            ((EditText) getActivity().findViewById(R.id.deviceIDValue)).setText(app.getDeviceId());
-        }
-
         if (app.getAuthToken() != null) {
             ((EditText) getActivity().findViewById(R.id.authTokenValue)).setText(app.getAuthToken());
         }
@@ -242,7 +237,7 @@ public class LoginPagerFragment extends IoTStarterPagerFragment {
         String buttonTitle = ((Button) getActivity().findViewById(R.id.activateButton)).getText().toString();
         Button activateButton = (Button) getActivity().findViewById(R.id.activateButton);
         app.setDeviceType(Constants.DEVICE_TYPE);
-        app.setDeviceId(((EditText) getActivity().findViewById(R.id.deviceIDValue)).getText().toString());
+        app.setDeviceId(((EditText) getActivity().findViewById(R.id.authTokenValue)).getText().toString());
         app.setOrganization(((EditText) getActivity().findViewById(R.id.organizationValue)).getText().toString());
         app.setAuthToken(((EditText) getActivity().findViewById(R.id.authTokenValue)).getText().toString());
         IoTClient iotClient = IoTClient.getInstance(context, app.getOrganization(), app.getDeviceId(), app.getDeviceType(), app.getAuthToken());

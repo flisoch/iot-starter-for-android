@@ -50,12 +50,10 @@
     <string name="activate_button">Activate Sensor</string>
     <string name="deactivate_button">Deactivate Sensor</string>
 
-    <string name="device_id">Username (Token): -</string>
     <string name="is_connected">Connected to IoT: No</string>
 
     <string name="organization_hint">IP Address</string>
-    <string name="device_id_hint">Username (Token)</string>
-    <string name="auth_token_hint">Password</string>
+    <string name="auth_token_hint">Access Token</string>
     <!-- End Login Fragment -->
 
     <!-- Begin IoT Fragment -->
@@ -72,12 +70,10 @@
 
     <!-- Begin Settings Activity -->
     <string name="organization_setting">IP Address: </string>
-    <string name="device_id_setting">Username (Token): </string>
-    <string name="auth_token_setting">Password: </string>
+    <string name="auth_token_setting">Access Token: </string>
 
     <string name="organization_value">89.208.220.227</string>
-    <string name="device_id_value">Username (Token)</string>
-    <string name="auth_token_value">Password</string>
+    <string name="auth_token_value">Access Token</string>
 
     <string name="save_button">Save Settings</string>
 

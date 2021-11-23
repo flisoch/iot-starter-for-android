@@ -127,7 +127,10 @@ public class IoTClient {
             char[] password = this.getAuthorizationToken().toCharArray();
 
             MqttConnectOptions options = new MqttConnectOptions();
+
             options.setCleanSession(true);
+            System.out.println("USERNAME: " + username + '\n');
+            System.out.println("PASSWORD" + password + '\n');
             options.setUserName(username);
             options.setPassword(password);
 

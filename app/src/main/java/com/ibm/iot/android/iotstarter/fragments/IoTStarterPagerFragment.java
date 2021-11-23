@@ -120,7 +120,7 @@ public class IoTStarterPagerFragment extends Fragment {
         Log.d(TAG, ".onOptionsItemSelected() entered");
 
         if (((MainPagerActivity) getActivity()).getCurrentItem() == 0) {
-            app.setDeviceId(((EditText) getActivity().findViewById(R.id.deviceIDValue)).getText().toString());
+            app.setDeviceId(((EditText) getActivity().findViewById(R.id.authTokenValue)).getText().toString());
             app.setOrganization(((EditText) getActivity().findViewById(R.id.organizationValue)).getText().toString());
             app.setAuthToken(((EditText) getActivity().findViewById(R.id.authTokenValue)).getText().toString());
         }
