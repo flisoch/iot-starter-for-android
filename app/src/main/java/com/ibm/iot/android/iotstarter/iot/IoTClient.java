@@ -129,9 +129,7 @@ public class IoTClient {
             MqttConnectOptions options = new MqttConnectOptions();
 
             options.setCleanSession(true);
-            System.out.println("USERNAME: " + username + '\n');
-            System.out.println("PASSWORD" + password + '\n');
-            options.setUserName(username);
+            options.setUserName(String.valueOf(password));
             options.setPassword(password);
 
             if (factory != null && !this.getOrganization().equals("quickstart")) {
