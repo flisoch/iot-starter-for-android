@@ -9,17 +9,18 @@ The application from this fork can publish Accelerometer data and receive Color 
 
 
 ## How it works
-A device that is registered with ThingsBoard IoT Platform may publish and subscribe to data that is presented as either an event or command using the MQTT protocol.
+A device that is registered with ThingsBoard IoT Platform may publish and subscribe to data that is presented as either an rpc request ot rpc response using the MQTT protocol.
 The Eclipse Paho MQTT Android Service is used to publish and subscribe to ThingsBoard IoT Platform. This can be downloaded from
 [Eclipse Paho MQTT Android Service](http://www.eclipse.org/paho/clients/android/).
 
-MQTT is a lightweight messaging protocol that supports publish/subscribe messaging. With MQTT, an application publishes messages to a topic. These messages may then be received by another application that is subscribed to that topic. This allows for a detached messaging network where the subscribers and publishers do not need to be aware of each other.
+MQTT is a lightweight messaging protocol that supports publish/subscribe messaging. With MQTT, an application publishes messages to a topic. These messages may then be received by another application that is subscribed to that topic. This allows for a detached messaging network where the subscribers and publishers do not need to be aware of each other. This application publishes to rpc request topic and subscribes to rpc response topic.
 The topics used by this application can be seen in the table below:
 
 ## Topics
 |Topic|Sample Topic|Sample Messages|
 |:---------- |:---------- |:------------|
-|`v1/devices/me/rpc/request/$resuestId`|`v1/devices/me/rpc/request/12345`|`{"method":"getColorsFromAccel","params":{"acceleration_x":-2.5065534,"acceleration_y":2.5568595,"acceleration_z":11.147109,"roll":0.22118242,"pitch":-0.22015898,"yaw":-0.30368638,"longitude":0.0,"latitude":0.0,"heading":0.0,"speed":0.0,"trip_id":"1637218763","timestamp":"2021-11-18T09:59:43.716+03:00"}}`|
+|`v1/devices/me/rpc/request/$requestId`|`v1/devices/me/rpc/request/12345`|`{"method":"getColorsFromAccel","params":{"acceleration_x":-2.5065534,"acceleration_y":2.5568595,"acceleration_z":11.147109,"roll":0.22118242,"pitch":-0.22015898,"yaw":-0.30368638,"longitude":0.0,"latitude":0.0,"heading":0.0,"speed":0.0,"trip_id":"1637218763","timestamp":"2021-11-18T09:59:43.716+03:00"}}`|
+|`v1/devices/me/rpc/response/$requestId`|`v1/devices/me/rpc/response/12345`|response from ThingsBoard: <br />`{"d":{"r":0,"b":0,"g":279,"alpha":1}}`|
 
 For more information on the MQTT protocol, see http://mqtt.org/.
 
