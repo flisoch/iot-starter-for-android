@@ -31,8 +31,7 @@ In order to try the application as a registered device, you must have a Samsung 
 On launching the application for the first time, you will need to enter your credentials to connect your device to ThingsBoard IoT Platform. The required information to connect your device includes:
 
 - Hostname or ip address of ThingsBoard server (Samsung IT Academy server ip by default)
-- Your device username. This is returned when registering your device with ThingsBoard IoT Platform. This can be authorization token if your device credential type is Access Token. Or this can be username if your device credential type is MQTT Basic.
-- Your device password. This is returned when registering your device with ThingsBoard IoT Platform. If you didn't set password while managing your device, the password can be any string. 
+- Your device access token. This is returned when registering your device with ThingsBoard IoT Platform.
 
 Once you have entered the necessary credentials, you may activate your device as a sensor. Pressing the 'Activate Sensor' button will connect the device to ThingsBoard IoT Platform and allow it to begin publishing and receiving data.
 
